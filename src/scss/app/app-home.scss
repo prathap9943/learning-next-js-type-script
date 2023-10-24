@@ -1,0 +1,58 @@
+@import '../variables/variables.scss';
+
+.page-block {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center center;
+    padding: 237px 0 178px 0;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+
+    &.home {
+        background-image: url('../../../public/assets/pages/food.webp');
+    }
+
+    &.blog {
+        background-image: url('../../../public/assets/pages/blog.webp');
+    }
+
+    &.about {
+        background-image: url('../../../public/assets/pages/about.webp');
+    }
+    &.contact {
+        background-image: url('../../../public/assets/pages/home-banner.webp');
+    }
+
+    background-repeat: no-repeat;
+
+    h3 {
+        font-family: "Philosopher", sans-serif;
+        font-size: 60px;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        font-weight: 600;
+        line-height: 70px;
+        margin-bottom: 27px;
+        color: $white;
+    }
+
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: -moz-linear-gradient(left, rgba(0, 29, 56, 0.7) 0%, rgba(26, 13, 1, 0.6) 100%);
+        background: -webkit-linear-gradient(left, rgba(0, 29, 56, 0.7) 0%, rgba(26, 13, 1, 0.6) 100%);
+        background: linear-gradient(to right, rgba(0, 29, 56, 0.7) 0%, rgba(26, 13, 1, 0.6) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3001d38', endColorstr='#991a0d01', GradientType=1);
+        z-index: -1;
+        content: '';
+    }
+}
